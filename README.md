@@ -24,7 +24,7 @@ website/
 ## Before you launch — required
 
 1. **Save your headshot** at `images/headshot.jpg` (the same image you sent in chat). The site references it on the homepage hero and About page; it falls back gracefully if missing, but the site looks far better with it.
-2. **Buy the domain** `parascandnotary.com` (or whatever you prefer) and update the `<link rel="canonical">` and `og:url` tags throughout if you choose a different domain.
+2. **Buy the domain** `parascandnotary.business` (or whatever you prefer) and update the `<link rel="canonical">` and `og:url` tags throughout if you choose a different domain.
 3. **Verify the contact info** on every page — phone (571) 332-3829 and email parascandconsulting@gmail.com appear in the header, footer, hero, contact card, and schema.org JSON-LD.
 
 ## SEO baked in
@@ -81,5 +81,5 @@ All four give you free HTTPS, which Google requires for ranking.
 Need changes? Common edits:
 - **Phone number**: search-and-replace `(571) 332-3829` and `+15713323829` across all `.html` files
 - **Email**: search-and-replace `parascandconsulting@gmail.com`
-- **Domain**: search-and-replace `parascandnotary.com` (canonical URLs, schema, OG tags, sitemap)
+- **Domain**: search-and-replace `parascandnotary.business` (canonical URLs, schema, OG tags, sitemap)
 - **Brand colors**: edit `:root` variables at the top of `styles.css`

@@ -6,4 +6,4 @@ Disallow: /tmp/
 Disallow: /*.json$
 
 # Sitemap
-Sitemap: https://parascandnotary.com/sitemap.xml
+Sitemap: https://parascandnotary.business/sitemap.xml
