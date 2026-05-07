@@ -1,0 +1,30 @@
+# Railway uses Caddy to serve static sites when it sees this file.
+# Listens on the PORT Railway provides; serves files from the repo root.
+
+:{$PORT} {
+	root * .
+	file_server
+	encode gzip zstd
+	try_files {path} {path}/ /index.html
+
+	# Sensible defaults
+	header {
+		# Long cache for assets, short cache for HTML
+		?Cache-Control "public, max-age=3600"
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+	}
+
+	# Strip .html so /medical-notary works as well as /medical-notary.html
+	@html_redirect {
+		path_regexp html_redir ^/(.+)\.html$
+	}
+	redir @html_redirect /{re.html_redir.1} 301
+
+	@html_rewrite {
+		not path /
+		not path_regexp \.[a-zA-Z0-9]+$
+	}
+	rewrite @html_rewrite {path}.html
+}

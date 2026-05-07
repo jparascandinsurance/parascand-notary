@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block obvious junk if any later
+Disallow: /tmp/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://parascandnotary.com/sitemap.xml
